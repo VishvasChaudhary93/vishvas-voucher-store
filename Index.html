@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voucher Store</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+header{
+    background:#0d6efd;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#222;
+    padding:10px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+}
+
+.hero{
+    text-align:center;
+    padding:40px 20px;
+    background:white;
+}
+
+.hero h1{
+    margin-bottom:10px;
+}
+
+.search-box{
+    width:90%;
+    max-width:500px;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    margin-top:20px;
+}
+
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    padding:20px;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    width:300px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+.price{
+    color:green;
+    font-size:22px;
+    margin:10px 0;
+}
+
+.buy-btn{
+    display:block;
+    width:100%;
+    background:#28a745;
+    color:white;
+    text-align:center;
+    padding:12px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+.about{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+}
+
+.contact{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+</style>
+
+</head>
+<body>
+
+<marquee>
+🚀 Welcome to Vishvas Voucher Store | 🔥 Exclusive Deals | ⚡ Instant Delivery | 💯 Trusted Service | 🎁 Premium Gift Cards & Vouchers Available
+</marquee>
+
+<header>
+    <h1>Voucher Store</h1>
+    <p>Buy Digital Vouchers Online</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Vouchers</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section class="hero">
+    <h1>Welcome to Voucher Store</h1>
+    <p>Best Deals on Digital Vouchers</p>
+
+    <input type="text"
+           id="searchInput"
+           class="search-box"
+           placeholder="Search Voucher..."
+           onkeyup="searchVoucher()">
+</section>
+
+<section class="products" id="productList">
+
+<div class="card">
+    <img src="images/paytm.jpg" alt="Paytm Voucher">
+    <div class="card-content">
+        <h2>Paytm Voucher ₹100</h2>
+        <p>Instant Delivery</p>
+        <div class="price">₹95</div>
+        <a class="buy-btn"
+           href="https://wa.me/918733893166">
+           Buy Now
+        </a>
+    </div>
+</div>
+
+<div class="card">
+    <img src="images/phone pay.jpg" alt="Phone pay Voucher">
+    <div class="card-content">
+        <h2>PhonePe Voucher ₹200</h2>
+        <p>Instant Delivery</p>
+        <div class="price">₹190</div>
+        <a class="buy-btn"
+           href="https://wa.me/918733893166">
+           Buy Now
+        </a>
+    </div>
+</div>
+
+<div class="card">
+    <img src="images/google pay.jpg" alt="Google pay Voucher">
+    <div class="card-content">
+        <h2>Google Pay Voucher ₹500</h2>
+        <p>Instant Delivery</p>
+        <div class="price">₹480</div>
+        <a class="buy-btn"
+           href="https://wa.me/918733893166">
+           Buy Now
+        </a>
+    </div>
+</div>
+
+<div class="card">
+    <img src="images/amazon.jpg" alt="Amazon gift Voucher">
+    <div class="card-content">
+        <h2>Amazon Gift Card ₹1000</h2>
+        <p>Instant Delivery</p>
+        <div class="price">₹970</div>
+        <a class="buy-btn"
+           href="https://wa.me/918733893166">
+           Buy Now
+        </a>
+    </div>
+</div>
+
+</section>
+
+</section>
+
+<section class="about">
+    <h2>About Us</h2>
+
+    <p>
+        Welcome to Voucher Store! We are dedicated to providing digital vouchers
+        and gift cards quickly, securely, and at competitive prices. Our goal
+        is to make online voucher purchasing simple, convenient, and reliable
+        for every customer.
+    </p>
+
+    <br>
+
+    <p>
+        We focus on fast service, customer satisfaction, and a smooth buying
+        experience. Whether you're looking for digital gift cards or vouchers,
+        we strive to deliver quality service with trust and transparency.
+    </p>
+
+    <br>
+
+    <p><strong>Owner:</strong> Vishvas Chaudhary</p>
+    <p><strong>Email:</strong> vishvaschaudhary93@gmail.com</p>
+    <p><strong>Mobile:</strong> 8733893166</p>
+</section>
+
+<footer>
+    © 2026 Voucher Store. All Rights Reserved.
+</footer>
+
+<script>
+function searchVoucher() {
+
+    let input =
+        document.getElementById("searchInput")
+        .value
+        .toUpperCase();
+
+    let cards =
+        document.getElementsByClassName("card");
+
+    for(let i=0;i<cards.length;i++){
+
+        let title =
+            cards[i]
+            .getElementsByTagName("h2")[0];
+
+        if(
+            title.innerHTML
+            .toUpperCase()
+            .indexOf(input) > -1
+        ){
+            cards[i].style.display="";
+        }
+        else{
+            cards[i].style.display="none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
